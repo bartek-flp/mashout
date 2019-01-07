@@ -8,12 +8,6 @@ dependencies:
   - drupal:comment
   - drupal:options
 package: Core
-# version: VERSION
-# core: 8.x
+version: VERSION
+core: 8.x
 configure: forum.overview
-
-# Information added by Drupal.org packaging script on 2018-12-20
-version: '8.x-1.4'
-core: '8.x'
-project: 'droopler'
-datestamp: 1545295418

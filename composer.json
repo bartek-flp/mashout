@@ -19,13 +19,15 @@
 	},
 	"require": {
 		"composer/installers": "^1.2",
-		"oomphinc/composer-installers-extender": "^1.1",
 		"cweagans/composer-patches": "^1.6",
 		"droptica/droopler": "^8.1.4",
 		"drupal-composer/drupal-scaffold": "^2.2",
+		"drupal/commerce": "^2.11",
+		"drupal/commerce_tpay": "^1.0@RC",
 		"drupal/console": "~1.0",
 		"drupal/core": "^8.6.3",
 		"drush/drush": "~8.0",
+		"oomphinc/composer-installers-extender": "^1.1",
 		"webflo/drupal-finder": "^1.0.0",
 		"webmozart/path-util": "^2.3"
 	},
