@@ -1,0 +1,13 @@
+name: Path
+type: module
+description: 'Allows users to rename URLs.'
+package: Core
+# version: VERSION
+# core: 8.x
+configure: path.admin_overview
+
+# Information added by Drupal.org packaging script on 2018-12-20
+version: '8.x-1.4'
+core: '8.x'
+project: 'droopler'
+datestamp: 1545295418
