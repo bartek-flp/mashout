@@ -1,0 +1,9 @@
+name: Mashout Calculators
+type: module
+description: 'Brewers Calculators'
+# core: 8.x
+package: Mashout
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'mashout_calculators'

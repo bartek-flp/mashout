@@ -40,5 +40,5 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
-
+themes/custom/droopler_subtheme/node_modules
 
