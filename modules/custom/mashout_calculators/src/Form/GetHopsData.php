@@ -2,47 +2,50 @@
 
 /**
  * @file
- * Contains \Drupal\devinshop_calculators\Form\Test.
+ * Contains \Drupal\mashout_calculators\Form\Test.
  */
 
 namespace Drupal\mashout_calculators\Form;
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\Core\StringTranslation\TranslationInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Ajax\InvokeCommand;
+
 
 class GetHopsData  {
 
-    use StringTranslationTrait;
+  public function data(array &$form, FormStateInterface $form_state) : AjaxResponse {
 
-    public function data(array &$form, FormStateInterface $form_state) : array {
-        $tid = $form_state->getValue('hop_variety');
-        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
-        $alphaAcids = !empty($term->field_alpha_acids->value) ? $term->field_alpha_acids->value : '';
-        $cohumulon = !empty($term->field_cohumulon->value) ? $term->field_cohumulon->value : '';
+    $hopField = $form_state->getValue('field_hops');
+    // foreach is needed.
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($hopField[0]["subform"]["field_hops_name"][0]["target_id"]);
+    $alphaAcids = !empty($term->field_alpha_acids->value) ? $term->field_alpha_acids->value : '';
+    $cohumulon = !empty($term->field_cohumulon->value) ? $term->field_cohumulon->value : '';
 
-        $form['data_container']['alfa_acids'] = [
-            '#type' => 'textfield',
-            '#title' => 'Alfa Kwasy (całościowo)',
-            '#size' => '60',
-            '#value' => $alphaAcids,
-            '#attributes' => [
-                'id' => ['edit-output'],
-                'class' => ['alpha-acid'],
-            ],
-        ];
-        $form['data_container']['cohumulon'] = [
-            '#type' => 'textfield',
-            '#title' => 'Cohumulon',
-            '#size' => '60',
-            '#value' => $cohumulon,
-            '#attributes' => [
-                'id' => ['edit-output'],
-            ],
-        ];
+    $elem = [
+      '#title' => 'Alfa Kwasy',
+      '#type' => 'number',
+      '#value' => $alphaAcids,
+      '#attributes' => [
+        'id' => ['field-hop-alpha-wrapper'],
+      ],
+    ];
 
-        return $form['data_container'];
+    $renderer = \Drupal::service('renderer');
+    $response = new AjaxResponse();
 
-    }
+    $hopField[0]["subform"]["field_recipe_alpha_acids"][0]["value"] = $alphaAcids;
+
+    $form_state->setRebuild(TRUE);
+
+    $a=1;
+
+    // try set value only, not form element.
+
+//    $response->addCommand(new ReplaceCommand('#field-hop-alpha-wrapper', $renderer->render($elem)));
+//
+//    return $response;
+  }
+
 }

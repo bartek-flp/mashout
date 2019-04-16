@@ -1,4 +1,12 @@
-devinshop_calculators.ibu:
+mashout_calculators.all:
+  path: '/calculators'
+  defaults:
+    _title: 'Brewers Calculators'
+    _controller: '\Drupal\mashout_calculators\Controller\BasicPage::content'
+  requirements:
+    _permission: 'access content'
+
+mashout_calculators.ibu:
   path: '/calculators/ibu'
   defaults:
     _title: 'Calcs'
@@ -6,7 +14,7 @@ devinshop_calculators.ibu:
   requirements:
     _permission: 'access content'
 
-devinshop_calculators.autocomplete:
+mashout_calculators.autocomplete:
   path: '/calculators/ibu/autocomplete'
   defaults:
     _controller: '\Drupal\mashout_calculators\Controller\AutocompleteController::handleAutocomplete'

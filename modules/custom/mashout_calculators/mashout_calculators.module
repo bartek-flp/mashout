@@ -1,1 +1,79 @@
 <?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function mashout_calculators_theme($existing, $type, $theme, $path) {
+  return [
+    'brewer_calculators' => [
+      'variables' => [
+        'title' => NULL,
+        'data' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+* Implements hook_field_widget_WIDGET_TYPE_form_alter().
+*/
+function mashout_calculators_field_widget_entity_reference_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'hops') {
+//    $element["target_id"]["#ajax"] = [
+//      'callback' => 'Drupal\mashout_calculators\Form\GetHopsData::data',
+//      'event' => 'autocompleteclose',
+//      'wrapper' => 'field-hop-alpha-wrapper',
+//    ];
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function mashout_calculators_field_widget_form_alter(&$form, FormStateInterface $form_state, &$context) {
+  $field_definition = $context['items']->getFieldDefinition();
+
+  if ($field_definition instanceof \Drupal\field\Entity\FieldConfig) {
+    $config = $field_definition->id();
+    list($entity_type, $bundle, $field_name) = explode('.', $config);
+
+//    if ($entity_type == 'paragraph') {
+//      switch ($field_name) {
+//        case 'field_hops_name':
+//          $form["target_id"]["#ajax"] = [
+//            'callback' => 'Drupal\mashout_calculators\Form\GetHopsData::data',
+//            'event' => 'autocompleteclose',
+//            'wrapper' => 'field-hop-alpha-wrapper',
+//          ];
+//          break;
+//
+//        case 'field_recipe_alpha_acids':
+//          $form['value']['#prefix'] = '<div id="field-hop-alpha-wrapper">';
+//          $form['value']['#suffix'] = '</div>';
+//          break;
+//      }
+//    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function mashout_calculators_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  switch ($entity->bundle()) {
+    case 'recipe':
+      //$entity->setTitle($entity->get('field_date')->value);
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function mashout_calculators_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'node_recipe_form' || 'node_recipe_edit_form') {
+    $form['#attached']['library'][] = 'mashout_calculators/ibucalc';
+  }
+}

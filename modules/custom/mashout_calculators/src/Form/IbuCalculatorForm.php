@@ -36,14 +36,7 @@ class IbuCalculatorForm extends FormBase {
             '#selection_settings' => [
                 'target_bundles' => ['hop_variety'],
             ],
-//            '#selection_handler' => 'views',
-//            '#selection_settings' => [
-//                'view' => [
-//                    'view_name' => 'hop_list',
-//                    'display_name' => 'default',
-//                ],
-//                'match_operator' => 'CONTAINS'
-//            ],
+
             '#ajax' => [
                 'callback' => 'Drupal\mashout_calculators\Form\GetHopsData::data',
                 'event' => 'autocompleteclose',
@@ -72,6 +65,12 @@ class IbuCalculatorForm extends FormBase {
         $form['data_container']['cohumulon'] = [
             '#type' => 'textfield',
             '#title' => $this->t('Cohumulon'),
+        ];
+
+        $form['batch_size'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Wielkość warki [litry]'),
+            '#attributes' => ['class' => ['batch-size']],
         ];
 
         $form['hop']['wort_gravity'] = [
@@ -103,7 +102,7 @@ class IbuCalculatorForm extends FormBase {
      * {@inheritdoc}
      */
     public function validateForm(array &$form, FormStateInterface $form_state) {
-
+        // check , or . in plato and change to dot
     }
 
     /**

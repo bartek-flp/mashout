@@ -16908,4 +16908,13 @@ footer .region-footer-main .block {
   text-transform: inherit;
 }
 
+.field--name-field-comment-blog {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.field--name-field-comment-blog article footer {
+  background: #979797;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
