@@ -103,18 +103,21 @@ function geysir_preprocess_field(&$vars) {
     $entity = $element[$delta]['#paragraph'];
     $paragraph_to_cut = $entity;
 
+    //hack.
+    $parent_revision = !empty($parent->getRevisionId()) ? $parent->getRevisionId() : 0;
+
     // Add link - before.
     $links['add_before'] = [
       'title'      => t('Add before'),
       'url'        => Url::fromRoute('geysir.modal.add_form', [
         'parent_entity_type'     => $parent->getEntityType()->id(),
         'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
+        'parent_entity_revision' => $parent_revision,
         'field'                  => $vars['field_name'],
         'field_wrapper_id'       => $field_wrapper_id,
         'delta'                  => $delta,
         'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'position'               => 'before',
         'js'                     => 'nojs',
       ]),
@@ -130,12 +133,12 @@ function geysir_preprocess_field(&$vars) {
       'url' => Url::fromRoute('geysir.modal.add_form', [
         'parent_entity_type'     => $parent->getEntityType()->id(),
         'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
+        'parent_entity_revision' => $parent_revision,
         'field'                  => $vars['field_name'],
         'field_wrapper_id'       => $field_wrapper_id,
         'delta'                  => $delta,
         'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'position'               => 'after',
         'js'                     => 'nojs',
       ]),
@@ -151,12 +154,12 @@ function geysir_preprocess_field(&$vars) {
       'url' => Url::fromRoute('geysir.modal.edit_form', [
         'parent_entity_type'     => $parent->getEntityType()->id(),
         'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
+        'parent_entity_revision' => $parent_revision,
         'field'                  => $vars['field_name'],
         'field_wrapper_id'       => $field_wrapper_id,
         'delta'                  => $delta,
         'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'js'                     => 'nojs',
       ]),
       'attributes' => [
@@ -194,12 +197,12 @@ function geysir_preprocess_field(&$vars) {
       'url' => Url::fromRoute('geysir.modal.delete_form', [
         'parent_entity_type'     => $parent->getEntityType()->id(),
         'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
+        'parent_entity_revision' => $parent_revision,
         'field'                  => $vars['field_name'],
         'field_wrapper_id'       => $field_wrapper_id,
         'delta'                  => $delta,
         'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'js'                     => 'nojs',
       ]),
       'attributes' => [
@@ -214,12 +217,12 @@ function geysir_preprocess_field(&$vars) {
       'url' => Url::fromRoute('geysir.paste', [
         'parent_entity_type'   => $parent->getEntityType()->id(),
         'parent_entity_bundle' => $parent->bundle(),
-        'parent_entity_revision'        => $parent->getRevisionId(),
+        'parent_entity_revision'        => $parent_revision,
         'field'                => $vars['field_name'],
         'field_wrapper_id'     => $field_wrapper_id,
         'delta'                => $delta,
         'position'             => 'before',
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'paragraph_to_paste'   => $paragraph_to_cut->id(),
         'js'                   => 'nojs',
       ]),
@@ -236,12 +239,12 @@ function geysir_preprocess_field(&$vars) {
       'url' => Url::fromRoute('geysir.paste', [
         'parent_entity_type'   => $parent->getEntityType()->id(),
         'parent_entity_bundle' => $parent->bundle(),
-        'parent_entity_revision'        => $parent->getRevisionId(),
+        'parent_entity_revision'        => $parent_revision,
         'field'                => $vars['field_name'],
         'field_wrapper_id'     => $field_wrapper_id,
         'delta'                => $delta,
         'position'             => 'after',
-        'paragraph_revision'     => $entity->getRevisionId(),
+        'paragraph_revision'     => $parent_revision,
         'paragraph_to_paste'   => $paragraph_to_cut->id(),
         'js'                   => 'nojs',
       ]),

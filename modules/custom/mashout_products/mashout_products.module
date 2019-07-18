@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Preprocess products.
+ */
+function mashout_products_preprocess_commerce_product(&$variables) {
+  /** @var \Drupal\commerce_product\Entity\Product $prod */
+  $prod = $variables['elements']['#commerce_product'];
+  $pid = $prod->id();
+  $variables['gallery'] = views_embed_view('product_gallery', 'block_1', $pid);
+
+  // Pass the price.
+  $variables['price'] = $prod->variations->entity->getPrice();
+}

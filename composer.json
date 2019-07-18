@@ -28,6 +28,7 @@
 		"drupal/context": "^4.0@beta",
 		"drupal/core": "^8.6.3",
 		"drupal/google_tag": "^1.1",
+		"drupal/viewsreference": "^1.4",
 		"drush/drush": "~8.0",
 		"oomphinc/composer-installers-extender": "^1.1",
 		"webflo/drupal-finder": "^1.0.0",

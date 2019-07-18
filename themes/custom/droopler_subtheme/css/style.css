@@ -16917,4 +16917,36 @@ footer .region-footer-main .block {
   background: #979797;
 }
 
+.product-data .field__label,
+.product-data .title {
+  font-size: 30px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-data img {
+  height: auto;
+}
+
+.product-data .data-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-data .data-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.view-product-gallery {
+  margin-bottom: 40px;
+}
+
 /*# sourceMappingURL=maps/style.css.map */

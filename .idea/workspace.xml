@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17c4d9b7-f564-4f7a-a47a-d24445512bc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/node/_comments.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.info.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.module" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/_custom_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_gallery.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_shirts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/fields/field--field-product-image.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--links.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--teaser-inline.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/product/commerce-product--shirts.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/BasicPage.php" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/BasicPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/custom/mashout_calculators/templates/brewer-calculators.html.twig" afterPath="$PROJECT_DIR$/modules/custom/mashout_calculators/templates/brewer-calculators.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/ckeditor.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/ckeditor.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/dropbutton.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/dropbutton.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/file.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/file.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/maintenance.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/libraries/maintenance.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/print.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/print.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/contrib/geysir/geysir.module" afterPath="$PROJECT_DIR$/modules/contrib/geysir/geysir.module" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/style.css.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/maps/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/style.css" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/base/bootstrap.min.js.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/base/bootstrap.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/base/global.min.js.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/base/global.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/global.min.js.map" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/js/min/global.min.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss" afterPath="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
@@ -38,106 +32,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ibucalc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_comments.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/node/_comments.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/scss/config/_colors.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mashout_calculators.libraries.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.libraries.yml">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="7" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mashout_calculators.routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml">
+      <file leaf-file-name="_shirts.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_shirts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="216">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IbuCalculatorForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php">
+      <file leaf-file-name="node--blog-post--links.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--links.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="72" />
+            <state relative-caret-position="535">
+              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicPage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/BasicPage.php">
+      <file leaf-file-name="_gallery.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_gallery.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-              <folding>
-                <element signature="e#57#114#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetHopsData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php">
+      <file leaf-file-name="_custom_variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/_custom_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-              <folding>
-                <element signature="e#7#74#0#PHP" expanded="true" />
-                <element signature="e#120#160#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mashout_calculators.module" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module">
+      <file leaf-file-name="mashout_products.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="76" column="68" lean-forward="false" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
+            <state relative-caret-position="198">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commerce-product--shirts.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/product/commerce-product--shirts.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="d_product.module" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_product/d_product.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="219" column="1" lean-forward="false" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="field--node--field-blog-main-image--blog-post.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_blog/templates/field--node--field-blog-main-image--blog-post.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -151,6 +130,9 @@
       <find>devinshop_calculators.ibu</find>
       <find>formClass</find>
       <find>ibucalc</find>
+      <find>localhos</find>
+      <find>127.0.0.</find>
+      <find>blog_post_header_absolute_wrapper</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -177,8 +159,22 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module" />
         <option value="$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js" />
-        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss" />
         <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/node/_comments.scss" />
+        <option value="$PROJECT_DIR$/sites/default/settings.php" />
+        <option value="$PROJECT_DIR$/modules/contrib/geysir/geysir.module" />
+        <option value="$PROJECT_DIR$/modules/contrib/commerce/modules/product/templates/commerce-product.html.twig" />
+        <option value="$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/templates/field/field--field-product-image.html.twig" />
+        <option value="$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.info.yml" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_gallery.scss" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss" />
+        <option value="$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_blog/templates/node--blog-post.html.twig" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--teaser-inline.html.twig" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/_custom_variables.scss" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_shirts.scss" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--links.html.twig" />
+        <option value="$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_product/d_product.module" />
+        <option value="$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.module" />
+        <option value="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/product/commerce-product--shirts.html.twig" />
       </list>
     </option>
   </component>
@@ -191,13 +187,17 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/themes/custom/droopler_subtheme/node_modules" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="mashout.host" id="611edbd9-70c5-427b-ac89-81a937ca9e80" name="mashout.host" />
       <server host="localhost" id="8c3e7d00-a926-40ee-8fc5-38ada1b70dbf" name="localhost" use_path_mappings="true">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/usr/share/phpmyadmin" />
+        </path_mappings>
+      </server>
+      <server host="train.host" id="39195f0a-80e5-461e-a178-b81388b82044" name="train.host" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/vendor/jcalderonzumba/gastonjs/tests/unit/Server/www/web" remote-root="/home/bartek/www/train.host/public_html/web" />
         </path_mappings>
       </server>
     </servers>
@@ -217,13 +217,15 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +242,19 @@
               <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
               <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="geysir" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -254,25 +269,111 @@
               <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mashout_calculators" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mashout_products" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
               <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mashout_calculators" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
               <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mashout_calculators" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="d_blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="d_blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="d_product" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="profiles" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
@@ -320,12 +421,56 @@
               <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_subtheme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="products" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_subtheme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_subtheme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="node" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_subtheme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="node" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mashout.host" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mashout.host" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="droopler_subtheme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="product" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,9 +487,14 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="Constants" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog" />
+      <recent name="$PROJECT_DIR$/modules/custom/mashout_products" />
+      <recent name="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/fields" />
+      <recent name="$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/product" />
       <recent name="$PROJECT_DIR$/sites/default" />
     </key>
   </component>
@@ -380,16 +530,21 @@
       <workItem from="1548822994490" duration="2599000" />
       <workItem from="1548995609194" duration="14387000" />
       <workItem from="1551382743707" duration="1363000" />
+      <workItem from="1557506664458" duration="165000" />
+      <workItem from="1557506954809" duration="599000" />
+      <workItem from="1557766151029" duration="12601000" />
+      <workItem from="1558583199796" duration="1414000" />
+      <workItem from="1559016711183" duration="1027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60064000" />
+    <option name="totallyTimeSpent" value="75870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28810722" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3126745" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954597" sideWeight="0.5019542" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -416,158 +571,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="81" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="55" />
-          <folding>
-            <element signature="e#7#74#0#PHP" expanded="true" />
-            <element signature="e#120#160#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/AutocompleteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/contrib/search_api/search_api.routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="66" lean-forward="true" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/BasicPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#57#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/templates/brewer-calculators.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="true" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#74#0#PHP" expanded="true" />
-            <element signature="e#120#160#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/AutocompleteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/contrib/search_api/search_api.routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Controller/BasicPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#57#114#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/templates/brewer-calculators.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,10 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#7#74#0#PHP" expanded="true" />
-            <element signature="e#120#160#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,10 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#74#0#PHP" expanded="true" />
-            <element signature="e#120#160#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,25 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding>
-            <marker date="1551331959707" expanded="true" signature="396:880" ph="{&quot;composer/installers&quot;: &quot;^1.2&quot;...}" />
-            <marker date="1551331959707" expanded="true" signature="898:1187" ph="{&quot;behat/mink&quot;: &quot;~1.7&quot;...}" />
-            <marker date="1551331959707" expanded="true" signature="1202:1229" ph="{&quot;drupal/drupal&quot;: &quot;*&quot;...}" />
-            <marker date="1551331959707" expanded="true" signature="1295:1323" ph="{&quot;sort-packages&quot;: true...}" />
-            <marker date="1551331959707" expanded="true" signature="1338:1402" ph="{...}" />
-            <marker date="1551331959707" expanded="true" signature="1416:1866" ph="{&quot;drupal-scaffold&quot;: &quot;DrupalComposer\\DrupalScaffold\\Plugin::scaffold&quot;...}" />
-            <marker date="1551331959707" expanded="true" signature="1512:1583" ph="[...]" />
-            <marker date="1551331959707" expanded="true" signature="1605:1676" ph="[...]" />
-            <marker date="1551331959707" expanded="true" signature="1700:1770" ph="[...]" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,36 +751,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#57#114#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php">
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="e#7#74#0#PHP" expanded="true" />
-            <element signature="e#120#160#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php">
+    <entry file="file://$PROJECT_DIR$/sites/default/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="552">
+          <caret line="761" column="74" lean-forward="true" selection-start-line="761" selection-start-column="74" selection-end-line="761" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module">
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/node/_comments.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="76" column="68" lean-forward="false" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="144">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/scss/config/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -811,34 +790,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/js/ibucalc.js">
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/IbuCalculatorForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/src/Form/GetHopsData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_calculators/mashout_calculators.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="76" column="68" lean-forward="false" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/templates/field/field.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="64" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/contrib/commerce/modules/product/templates/commerce-product.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/fields/field--field-product-image.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/templates/field/field--field-product-image.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/contrib/geysir/geysir.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="335" column="37" lean-forward="false" selection-start-line="335" selection-start-column="37" selection-end-line="335" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.info.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/themes/custom/droopler_theme/scss/config/_colors.scss">
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_blog/templates/node--blog-post.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="16" />
+        <state relative-caret-position="237">
+          <caret line="92" column="64" lean-forward="false" selection-start-line="92" selection-start-column="64" selection-end-line="92" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/_custom_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/node/_comments.scss">
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_gallery.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_blog/templates/field--node--field-blog-main-image--blog-post.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--teaser-inline.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/scss/custom/products/_shirts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/node/blog/node--blog-post--links.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/contrib/droopler/modules/custom/d_product/d_product.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="219" column="1" lean-forward="false" selection-start-line="219" selection-start-column="1" selection-end-line="219" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/custom/mashout_products/mashout_products.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/droopler_subtheme/templates/product/commerce-product--shirts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding />
         </state>
       </provider>
