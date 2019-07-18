@@ -34,6 +34,10 @@ class PriceItem extends FieldItemBase {
       ->setLabel(t('Currency code'))
       ->setRequired(FALSE);
 
+    $properties['formatted'] = DataDefinition::create('formatted_price')
+      ->setLabel(t('Formatted price'))
+      ->setRequired(FALSE);
+
     return $properties;
   }
 
@@ -108,7 +112,7 @@ class PriceItem extends FieldItemBase {
         ],
       ],
     ]);
-    $available_currencies = $this->getSetting('available_currencies');
+    $available_currencies = array_filter($this->getSetting('available_currencies'));
     $constraints[] = $manager->create('Currency', ['availableCurrencies' => $available_currencies]);
 
     return $constraints;

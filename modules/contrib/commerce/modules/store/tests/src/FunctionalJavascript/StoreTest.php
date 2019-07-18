@@ -3,17 +3,14 @@
 namespace Drupal\Tests\commerce_store\FunctionalJavascript;
 
 use Drupal\commerce_store\Entity\Store;
-use Drupal\Tests\commerce\Functional\CommerceBrowserTestBase;
-use Drupal\Tests\commerce\FunctionalJavascript\JavascriptTestTrait;
+use Drupal\Tests\commerce\FunctionalJavascript\CommerceWebDriverTestBase;
 
 /**
- * Create, view, edit, delete, and change store entities.
+ * Tests the store UI.
  *
  * @group commerce
  */
-class StoreTest extends CommerceBrowserTestBase {
-
-  use JavascriptTestTrait;
+class StoreTest extends CommerceWebDriverTestBase {
 
   /**
    * A store type entity to use in the tests.
@@ -75,18 +72,38 @@ class StoreTest extends CommerceBrowserTestBase {
    * Tests editing a store.
    */
   public function testEditStore() {
-    $store = $this->createStore();
-
+    $store = $this->createStore('Test');
     $this->drupalGet($store->toUrl('edit-form'));
-    $new_store_name = $this->randomMachineName(8);
     $edit = [
-      'name[0][value]' => $new_store_name,
+      'name[0][value]' => 'Test!',
     ];
     $this->submitForm($edit, 'Save');
+    $this->assertSession()->pageTextContains("Saved the Test! store.");
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_store')->resetCache([$store->id()]);
-    $store_changed = Store::load($store->id());
-    $this->assertEquals($new_store_name, $store_changed->getName(), 'The store name successfully updated.');
+    $store = $this->reloadEntity($store);
+    $this->assertEquals('Test!', $store->label());
+  }
+
+  /**
+   * Tests duplicating a store.
+   */
+  public function testDuplicateStore() {
+    $store = $this->createStore('Test');
+    $this->drupalGet($store->toUrl('duplicate-form'));
+    $edit = [
+      'name[0][value]' => 'Test2',
+    ];
+    $this->submitForm($edit, 'Save');
+    $this->assertSession()->pageTextContains('Saved the Test2 store.');
+
+    // Confirm that the original store is unchanged.
+    $store = $this->reloadEntity($store);
+    $this->assertEquals('Test', $store->label());
+
+    // Confirm that the new store type has the expected data.
+    $store = Store::load($store->id() + 1);
+    $this->assertNotEmpty($store);
+    $this->assertEquals('Test2', $store->label());
   }
 
   /**
@@ -95,13 +112,12 @@ class StoreTest extends CommerceBrowserTestBase {
   public function testDeleteStore() {
     $store = $this->createStore();
     $this->drupalGet($store->toUrl('delete-form'));
-    $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('This action cannot be undone.');
     $this->submitForm([], t('Delete'));
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_store')->resetCache([$store->id()]);
+    $this->container->get('entity_type.manager')->getStorage('commerce_store')->resetCache([$store->id()]);
     $store_exists = (bool) Store::load($store->id());
-    $this->assertEmpty($store_exists, 'The new store has been deleted from the database using UI.');
+    $this->assertEmpty($store_exists);
   }
 
 }

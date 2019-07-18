@@ -8,6 +8,7 @@ use Drupal\address\AddressInterface;
 use Drupal\commerce_price\Entity\CurrencyInterface;
 use Drupal\user\UserInterface;
 use Drupal\Core\Entity\ContentEntityBase;
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 
@@ -38,7 +39,11 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *       "default" = "Drupal\commerce_store\Form\StoreForm",
  *       "add" = "Drupal\commerce_store\Form\StoreForm",
  *       "edit" = "Drupal\commerce_store\Form\StoreForm",
+ *       "duplicate" = "Drupal\commerce_store\Form\StoreForm",
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm"
+ *     },
+ *     "local_task_provider" = {
+ *       "default" = "Drupal\entity\Menu\DefaultEntityLocalTaskProvider",
  *     },
  *     "route_provider" = {
  *       "default" = "Drupal\entity\Routing\AdminHtmlRouteProvider",
@@ -65,6 +70,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *     "add-page" = "/store/add",
  *     "add-form" = "/store/add/{commerce_store_type}",
  *     "edit-form" = "/store/{commerce_store}/edit",
+ *     "duplicate-form" = "/store/{commerce_store}/duplicate",
  *     "delete-form" = "/store/{commerce_store}/delete",
  *     "delete-multiple-form" = "/admin/commerce/config/stores/delete",
  *     "collection" = "/admin/commerce/config/stores",
@@ -204,6 +210,22 @@ class Store extends ContentEntityBase implements StoreInterface {
   /**
    * {@inheritdoc}
    */
+  public function preSave(EntityStorageInterface $storage) {
+    parent::preSave($storage);
+
+    foreach (array_keys($this->getTranslationLanguages()) as $langcode) {
+      $translation = $this->getTranslation($langcode);
+
+      // If no owner has been set explicitly, make the anonymous user the owner.
+      if (!$translation->getOwner()) {
+        $translation->setOwnerId(0);
+      }
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
@@ -279,9 +301,6 @@ class Store extends ContentEntityBase implements StoreInterface {
       ])
       ->setDisplayOptions('form', [
         'type' => 'address_default',
-        'settings' => [
-          'default_country' => 'site_default',
-        ],
         'weight' => 3,
       ])
       ->setDisplayConfigurable('view', TRUE)

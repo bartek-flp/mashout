@@ -4,15 +4,10 @@ description: Provides a widget to allow settings of link attributes for menu lin
 # core: 8.x
 dependencies:
   - drupal:link
+  - drupal:system (>=8.4)
 
-# Information added by Drupal.org packaging script on 2018-09-17
-# version: '8.x-1.5'
-# core: '8.x'
-# project: 'link_attributes'
-# datestamp: 1537173787
-
-# Information added by Drupal.org packaging script on 2018-12-20
-version: '8.x-1.4'
+# Information added by Drupal.org packaging script on 2019-06-14
+version: '8.x-1.8'
 core: '8.x'
-project: 'droopler'
-datestamp: 1545295418
+project: 'link_attributes'
+datestamp: 1560473296

@@ -40,6 +40,9 @@ use Drupal\user\UserInterface;
  *       "edit" = "Drupal\commerce_product\Form\ProductForm",
  *       "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm"
  *     },
+ *     "local_task_provider" = {
+ *       "default" = "Drupal\entity\Menu\DefaultEntityLocalTaskProvider",
+ *     },
  *     "route_provider" = {
  *       "default" = "Drupal\entity\Routing\AdminHtmlRouteProvider",
  *       "delete-multiple" = "Drupal\entity\Routing\DeleteMultipleRouteProvider",
@@ -253,7 +256,7 @@ class Product extends CommerceContentEntityBase implements ProductInterface {
   public function getDefaultVariation() {
     foreach ($this->getVariations() as $variation) {
       // Return the first active variation.
-      if ($variation->isActive() && $variation->access('view')) {
+      if ($variation->isPublished() && $variation->access('view')) {
         return $variation;
       }
     }

@@ -6,6 +6,7 @@ use Drupal\commerce_order\Adjustment;
 use Drupal\commerce_order\Entity\Order;
 use Drupal\commerce_order\Entity\OrderItem;
 use Drupal\commerce_price\Price;
+use Drupal\Core\Test\AssertMailTrait;
 use Drupal\profile\Entity\Profile;
 
 /**
@@ -14,6 +15,8 @@ use Drupal\profile\Entity\Profile;
  * @group commerce
  */
 class OrderAdminTest extends OrderBrowserTestBase {
+
+  use AssertMailTrait;
 
   /**
    * The profile to test against.
@@ -27,7 +30,7 @@ class OrderAdminTest extends OrderBrowserTestBase {
    */
   protected function setUp() {
     parent::setUp();
-    \Drupal::service('module_installer')->install(['profile']);
+    $this->container->get('module_installer')->install(['profile']);
 
     $profile_values = [
       'type' => 'customer',
@@ -222,7 +225,7 @@ class OrderAdminTest extends OrderBrowserTestBase {
     $this->assertSession()->pageTextContains('This action cannot be undone.');
     $this->submitForm([], t('Delete'));
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_order')->resetCache([$order->id()]);
+    $this->container->get('entity_type.manager')->getStorage('commerce_order')->resetCache([$order->id()]);
     $order_exists = (bool) Order::load($order->id());
     $this->assertEmpty($order_exists, 'The order has been deleted from the database.');
   }
@@ -245,9 +248,51 @@ class OrderAdminTest extends OrderBrowserTestBase {
     ]));
     $this->submitForm([], t('Unlock'));
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_order')->resetCache([$order->id()]);
+    $this->container->get('entity_type.manager')->getStorage('commerce_order')->resetCache([$order->id()]);
     $order = Order::load($order->id());
     $this->assertFalse($order->isLocked());
+  }
+
+  /**
+   * Tests resending the order receipt.
+   */
+  public function testResendReceipt() {
+    $order = $this->createEntity('commerce_order', [
+      'type' => 'default',
+      'mail' => $this->loggedInUser->getEmail(),
+      'uid' => $this->loggedInUser,
+      'store_id' => $this->store,
+      'locked' => TRUE,
+    ]);
+
+    // No access until the order has been placed.
+    $this->drupalGet($order->toUrl('resend-receipt-form'));
+    $this->assertSession()->statusCodeEquals(403);
+
+    // Placing the order sends the receipt.
+    $transition = $order->getState()->getTransitions();
+    $order->getState()->applyTransition($transition['place']);
+    $order->save();
+    $emails = $this->getMails();
+    $this->assertEquals(1, count($emails));
+    $email = array_pop($emails);
+    $this->assertEquals('Order #' . $order->getOrderNumber() . ' confirmed', $email['subject']);
+
+    // Change the order number to differentiate from automatic email.
+    $order->setOrderNumber('2018/01');
+    $order->save();
+
+    $this->drupalGet($order->toUrl('resend-receipt-form'));
+    $this->assertSession()->pageTextContains(t('Are you sure you want to resend the receipt for order @label?', [
+      '@label' => $order->label(),
+    ]));
+    $this->submitForm([], t('Resend receipt'));
+
+    $emails = $this->getMails();
+    $this->assertEquals(2, count($emails));
+    $email = array_pop($emails);
+    $this->assertEquals('Order #2018/01 confirmed', $email['subject']);
+    $this->assertSession()->pageTextContains("Order receipt resent.");
   }
 
   /**
@@ -275,7 +320,7 @@ class OrderAdminTest extends OrderBrowserTestBase {
 
     // Confirm that the transition buttons are visible and functional.
     $workflow = $order->getState()->getWorkflow();
-    $transitions = $workflow->getAllowedTransitions($order->getState()->value, $order);
+    $transitions = $workflow->getAllowedTransitions($order->getState()->getId(), $order);
     foreach ($transitions as $transition) {
       $this->assertSession()->buttonExists($transition->getLabel());
     }

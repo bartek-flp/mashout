@@ -7,6 +7,7 @@ use Drupal\commerce_price\Price;
 use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_product\Entity\ProductVariation;
 use Drupal\Tests\commerce\Kernel\CommerceKernelTestBase;
+use Drupal\Tests\commerce_cart\Traits\CartManagerTestTrait;
 
 /**
  * Tests the cart manager.
@@ -73,10 +74,15 @@ class CartManagerTest extends CommerceKernelTestBase {
   protected function setUp() {
     parent::setUp();
 
+    $this->installEntitySchema('profile');
     $this->installEntitySchema('commerce_order');
+    $this->installEntitySchema('commerce_order_item');
+    $this->installEntitySchema('commerce_product');
+    $this->installEntitySchema('commerce_product_variation');
     $this->installConfig(['commerce_order']);
     $this->installConfig(['commerce_product']);
     $this->installConfig(['extra_order_item_field']);
+    $this->installCommerceCart();
 
     $this->variation1 = ProductVariation::create([
       'type' => 'default',
@@ -109,8 +115,6 @@ class CartManagerTest extends CommerceKernelTestBase {
    * @covers ::emptyCart
    */
   public function testCartManager() {
-    $this->installCommerceCart();
-
     $cart = $this->cartProvider->createCart('default', $this->store, $this->user);
     $this->assertInstanceOf(OrderInterface::class, $cart);
     $this->assertEmpty($cart->getItems());

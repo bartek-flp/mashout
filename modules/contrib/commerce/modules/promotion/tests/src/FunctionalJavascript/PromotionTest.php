@@ -3,17 +3,14 @@
 namespace Drupal\Tests\commerce_promotion\FunctionalJavascript;
 
 use Drupal\commerce_promotion\Entity\Promotion;
-use Drupal\Tests\commerce\Functional\CommerceBrowserTestBase;
-use Drupal\Tests\commerce\FunctionalJavascript\JavascriptTestTrait;
+use Drupal\Tests\commerce\FunctionalJavascript\CommerceWebDriverTestBase;
 
 /**
  * Tests the admin UI for promotions.
  *
  * @group commerce
  */
-class PromotionTest extends CommerceBrowserTestBase {
-
-  use JavascriptTestTrait;
+class PromotionTest extends CommerceWebDriverTestBase {
 
   /**
    * Modules to enable.
@@ -73,24 +70,23 @@ class PromotionTest extends CommerceBrowserTestBase {
     $this->getSession()->getPage()->hasCheckedField(' Unlimited');
     $usage_limit_xpath = '//input[@type="number" and @name="usage_limit[0][usage_limit]"]';
     $this->assertFalse($this->getSession()->getDriver()->isVisible($usage_limit_xpath));
-    $this->getSession()->getPage()->checkField('Limited number of uses');
+    // Select 'Limited number of uses'.
+    $this->getSession()->getPage()->selectFieldOption('usage_limit[0][limit]', '1');
     $this->assertTrue($this->getSession()->getDriver()->isVisible($usage_limit_xpath));
     $this->getSession()->getPage()->fillField('usage_limit[0][usage_limit]', '99');
 
     $this->submitForm([], t('Save'));
     $this->assertSession()->pageTextContains("Saved the $name promotion.");
-    $promotion_count = $this->getSession()->getPage()->findAll('xpath', '//table/tbody/tr/td[text()="' . $name . '"]');
-    $this->assertEquals(count($promotion_count), 1, 'promotions exists in the table.');
+    $rows = $this->getSession()->getPage()->findAll('xpath', '//table/tbody/tr/td[text()="' . $name . '"]');
+    $this->assertCount(1, $rows);
 
+    /** @var \Drupal\commerce_promotion\Entity\PromotionInterface $promotion */
     $promotion = Promotion::load(1);
-    /** @var \Drupal\commerce\Plugin\Field\FieldType\PluginItem $offer_field */
-    $offer_field = $promotion->get('offer')->first();
-    $this->assertEquals('0.10', $offer_field->target_plugin_configuration['percentage']);
-
-    /** @var \Drupal\commerce\Plugin\Field\FieldType\PluginItem $condition_field */
-    $condition_field = $promotion->get('conditions')->first();
-    $this->assertEquals('50.00', $condition_field->target_plugin_configuration['amount']['number']);
-
+    $offer = $promotion->getOffer();
+    $this->assertEquals('0.10', $offer->getConfiguration()['percentage']);
+    $conditions = $promotion->getConditions();
+    $condition = reset($conditions);
+    $this->assertEquals('50.00', $condition->getConfiguration()['amount']['number']);
     $this->assertEquals('99', $promotion->getUsageLimit());
     $this->drupalGet($promotion->toUrl('edit-form'));
     $this->getSession()->getPage()->hasCheckedField('Limited number of uses');
@@ -112,23 +108,22 @@ class PromotionTest extends CommerceBrowserTestBase {
     $this->waitForAjaxToFinish();
 
     $name = $this->randomMachineName(8);
+    $this->getSession()->getPage()->checkField('end_date[0][has_value]');
     $edit = [
       'name[0][value]' => $name,
       'offer[0][target_plugin_configuration][order_percentage_off][percentage]' => '10.0',
+      // Set an end date.
+      'end_date[0][container][value][date]' => '1010' . date("Y") + 1,
     ];
-
-    // Set an end date.
-    $this->getSession()->getPage()->checkField('end_date[0][has_value]');
-    $edit['end_date[0][container][value][date]'] = date("Y") + 1 . '-01-01';
-
-    $this->submitForm($edit, t('Save'));
+    $this->drupalPostForm(NULL, $edit, t('Save'));
     $this->assertSession()->pageTextContains("Saved the $name promotion.");
-    $promotion_count = $this->getSession()->getPage()->findAll('xpath', '//table/tbody/tr/td[text()="' . $name . '"]');
-    $this->assertEquals(count($promotion_count), 1, 'promotions exists in the table.');
 
-    /** @var \Drupal\commerce\Plugin\Field\FieldType\PluginItem $offer_field */
-    $offer_field = Promotion::load(1)->get('offer')->first();
-    $this->assertEquals('0.10', $offer_field->target_plugin_configuration['percentage']);
+    $rows = $this->getSession()->getPage()->findAll('xpath', '//table/tbody/tr/td[text()="' . $name . '"]');
+    $this->assertCount(1, $rows);
+    /** @var \Drupal\commerce_promotion\Entity\PromotionInterface $promotion */
+    $promotion = Promotion::load(1);
+    $offer = $promotion->getOffer();
+    $this->assertEquals('0.10', $offer->getConfiguration()['percentage']);
   }
 
   /**
@@ -136,7 +131,7 @@ class PromotionTest extends CommerceBrowserTestBase {
    */
   public function testEditPromotion() {
     $promotion = $this->createEntity('commerce_promotion', [
-      'name' => $this->randomMachineName(8),
+      'name' => '10% off',
       'status' => TRUE,
       'offer' => [
         'target_plugin_id' => 'order_item_percentage_off',
@@ -166,20 +161,74 @@ class PromotionTest extends CommerceBrowserTestBase {
     $this->assertSession()->checkboxChecked('Current order total');
     $this->assertSession()->fieldValueEquals('conditions[form][order][order_total_price][configuration][form][amount][number]', '9.10');
 
-    $new_promotion_name = $this->randomMachineName(8);
     $edit = [
-      'name[0][value]' => $new_promotion_name,
+      'name[0][value]' => '20% off',
       'offer[0][target_plugin_configuration][order_item_percentage_off][percentage]' => '20',
     ];
     $this->submitForm($edit, 'Save');
+    $this->assertSession()->pageTextContains('Saved the 20% off promotion.');
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_promotion')->resetCache([$promotion->id()]);
-    $promotion_changed = Promotion::load($promotion->id());
-    $this->assertEquals($new_promotion_name, $promotion_changed->getName(), 'The promotion name successfully updated.');
+    /** @var \Drupal\commerce_promotion\Entity\PromotionInterface $promotion */
+    $promotion = $this->reloadEntity($promotion);
+    $this->assertEquals('20% off', $promotion->getName());
+    $offer = $promotion->getOffer();
+    $this->assertEquals('0.20', $offer->getConfiguration()['percentage']);
+  }
 
-    /** @var \Drupal\commerce\Plugin\Field\FieldType\PluginItem $offer_field */
-    $offer_field = $promotion_changed->get('offer')->first();
-    $this->assertEquals('0.20', $offer_field->target_plugin_configuration['percentage']);
+  /**
+   * Tests duplicating a promotion.
+   */
+  public function testDuplicatePromotion() {
+    $promotion = $this->createEntity('commerce_promotion', [
+      'name' => '10% off',
+      'status' => TRUE,
+      'offer' => [
+        'target_plugin_id' => 'order_item_percentage_off',
+        'target_plugin_configuration' => [
+          'percentage' => '0.10',
+        ],
+      ],
+      'conditions' => [
+        [
+          'target_plugin_id' => 'order_total_price',
+          'target_plugin_configuration' => [
+            'amount' => [
+              'number' => '9.10',
+              'currency_code' => 'USD',
+            ],
+          ],
+        ],
+      ],
+    ]);
+
+    $this->drupalGet($promotion->toUrl('duplicate-form'));
+    // Check the integrity of the form.
+    $this->assertSession()->fieldValueEquals('name[0][value]', '10% off');
+    $this->assertSession()->fieldValueEquals('offer[0][target_plugin_id]', 'order_item_percentage_off');
+    $this->assertSession()->fieldValueEquals('offer[0][target_plugin_configuration][order_item_percentage_off][percentage]', '10');
+    $this->assertSession()->pageTextContains('Restricted');
+    $this->assertSession()->checkboxChecked('Current order total');
+    $this->assertSession()->fieldValueEquals('conditions[form][order][order_total_price][configuration][form][amount][number]', '9.10');
+
+    $edit = [
+      'name[0][value]' => '20% off',
+      'offer[0][target_plugin_configuration][order_item_percentage_off][percentage]' => '20',
+    ];
+    $this->submitForm($edit, 'Save');
+    $this->assertSession()->pageTextContains('Saved the 20% off promotion.');
+
+    // Confirm that the original promotion is unchanged.
+    $promotion = $this->reloadEntity($promotion);
+    $this->assertNotEmpty($promotion);
+    $this->assertEquals('10% off', $promotion->label());
+
+    // Confirm that the new promotion has the expected data.
+    /** @var \Drupal\commerce_promotion\Entity\PromotionInterface $promotion */
+    $promotion = Promotion::load($promotion->id() + 1);
+    $this->assertNotEmpty($promotion);
+    $this->assertEquals('20% off', $promotion->label());
+    $offer = $promotion->getOffer();
+    $this->assertEquals('0.20', $offer->getConfiguration()['percentage']);
   }
 
   /**
@@ -190,13 +239,12 @@ class PromotionTest extends CommerceBrowserTestBase {
       'name' => $this->randomMachineName(8),
     ]);
     $this->drupalGet($promotion->toUrl('delete-form'));
-    $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('This action cannot be undone.');
     $this->submitForm([], t('Delete'));
 
-    \Drupal::service('entity_type.manager')->getStorage('commerce_promotion')->resetCache([$promotion->id()]);
+    $this->container->get('entity_type.manager')->getStorage('commerce_promotion')->resetCache([$promotion->id()]);
     $promotion_exists = (bool) Promotion::load($promotion->id());
-    $this->assertEmpty($promotion_exists, 'The new promotion has been deleted from the database using UI.');
+    $this->assertEmpty($promotion_exists);
   }
 
 }

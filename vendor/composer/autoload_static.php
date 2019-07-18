@@ -9,14 +9,12 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'cf97c57bfe0f23854afd2f3818abb7a0' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
         '9bf37a3d0dad93e29cb4e1b1bfab04e9' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
         'ce70dccb4bcc2efc6e94d2ee526e6972' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -25,6 +23,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         '0b0974a5566a1077e4f2e111341112c1' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_server.php',
         '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
         '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
     );
@@ -59,6 +58,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'T' => 
         array (
             'Twig\\' => 5,
+            'TYPO3\\PharStreamWrapper\\' => 24,
         ),
         'S' => 
         array (
@@ -96,6 +96,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Prophecy\\' => 9,
             'PhpParser\\' => 10,
         ),
         'O' => 
@@ -118,8 +119,13 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             'GuzzleHttp\\' => 11,
             'Goutte\\' => 7,
         ),
+        'E' => 
+        array (
+            'Egulias\\EmailValidator\\' => 23,
+        ),
         'D' => 
         array (
+            'Drush\\' => 6,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
             'Drupal\\Console\\Core\\' => 20,
@@ -128,7 +134,9 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             'Drupal\\Component\\' => 17,
             'DrupalComposer\\DrupalScaffold\\' => 30,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -144,6 +152,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         ),
         'B' => 
         array (
+            'Brumann\\Polyfill\\' => 17,
             'Behat\\Mink\\Driver\\' => 18,
             'Behat\\Mink\\' => 11,
         ),
@@ -204,6 +213,10 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'TYPO3\\PharStreamWrapper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/typo3/phar-stream-wrapper/src',
         ),
         'Symfony\\Polyfill\\Php70\\' => 
         array (
@@ -329,6 +342,10 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Prophecy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -365,6 +382,14 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         array (
             0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
         ),
+        'Egulias\\EmailValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
+        'Drush\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drush/drush/src',
+        ),
         'Drupal\\Driver\\' => 
         array (
             0 => __DIR__ . '/../..' . '/drivers/lib/Drupal/Driver',
@@ -397,9 +422,17 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -440,6 +473,10 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         array (
             0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
         ),
+        'Brumann\\Polyfill\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brumann/polyfill-unserialize/src',
+        ),
         'Behat\\Mink\\Driver\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/mink-browserkit-driver/src',
@@ -464,7 +501,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         array (
             'org\\bovigo\\vfs\\' => 
             array (
-                0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
+                0 => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php',
             ),
         ),
         'T' => 
@@ -483,17 +520,13 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         ),
         'P' => 
         array (
-            'Prophecy\\' => 
+            'PEAR' => 
             array (
-                0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
             ),
         ),
         'E' => 
         array (
-            'Egulias\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/egulias/email-validator/src',
-            ),
             'EasyRdf_' => 
             array (
                 0 => __DIR__ . '/..' . '/easyrdf/easyrdf/lib',
@@ -504,14 +537,6 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             'Drush' => 
             array (
                 0 => __DIR__ . '/..' . '/drush/drush/lib',
-            ),
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
-            ),
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
             'Dflydev\\PlaceholderResolver' => 
             array (
@@ -532,7 +557,22 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             array (
                 0 => __DIR__ . '/..' . '/drush/drush/lib',
             ),
+            'Console' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/console_getopt',
+            ),
         ),
+        'A' => 
+        array (
+            'Archive_Tar' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/archive_tar',
+            ),
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -999,7 +1039,6 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'tpayLibs\\src\\Dictionaries\\CardDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/CardDictionary.php',
-        'tpayLibs\\src\\Dictionaries\\ErrorCodes\\SzkwalErrors' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/ErrorCodes/SzkwalErrors.php',
         'tpayLibs\\src\\Dictionaries\\ErrorCodes\\TransactionApiErrors' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/ErrorCodes/TransactionApiErrors.php',
         'tpayLibs\\src\\Dictionaries\\FieldValueFilters' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/FieldValueFilters.php',
         'tpayLibs\\src\\Dictionaries\\FieldsConfigDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/FieldsConfigDictionary.php',
@@ -1013,8 +1052,6 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'tpayLibs\\src\\Dictionaries\\Payments\\BlikFieldsDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/Payments/BlikFieldsDictionary.php',
         'tpayLibs\\src\\Dictionaries\\Payments\\CardDeregisterFieldsDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/Payments/CardDeregisterFieldsDictionary.php',
         'tpayLibs\\src\\Dictionaries\\Payments\\CardFieldsDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/Payments/CardFieldsDictionary.php',
-        'tpayLibs\\src\\Dictionaries\\Payments\\SzkwalFieldsDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/Payments/SzkwalFieldsDictionary.php',
-        'tpayLibs\\src\\Dictionaries\\Payments\\WhiteLabelFieldsDictionary' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Dictionaries/Payments/WhiteLabelFieldsDictionary.php',
         'tpayLibs\\src\\Translations\\English' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Translations/English.php',
         'tpayLibs\\src\\Translations\\Keys' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Translations/Keys.php',
         'tpayLibs\\src\\Translations\\Polish' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/Translations/Polish.php',
@@ -1025,21 +1062,16 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'tpayLibs\\src\\_class_tpay\\Notifications\\BasicNotificationHandler' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Notifications/BasicNotificationHandler.php',
         'tpayLibs\\src\\_class_tpay\\Notifications\\BlikAliasNotificationHandler' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Notifications/BlikAliasNotificationHandler.php',
         'tpayLibs\\src\\_class_tpay\\Notifications\\CardNotificationHandler' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Notifications/CardNotificationHandler.php',
-        'tpayLibs\\src\\_class_tpay\\Notifications\\SzkwalNotificationsHandler' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Notifications/SzkwalNotificationsHandler.php',
         'tpayLibs\\src\\_class_tpay\\PaymentBlik' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentBlik.php',
         'tpayLibs\\src\\_class_tpay\\PaymentCard' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentCard.php',
-        'tpayLibs\\src\\_class_tpay\\PaymentDac' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentDac.php',
         'tpayLibs\\src\\_class_tpay\\PaymentForms\\PaymentBasicForms' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentForms/PaymentBasicForms.php',
         'tpayLibs\\src\\_class_tpay\\PaymentForms\\PaymentCardForms' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentForms/PaymentCardForms.php',
         'tpayLibs\\src\\_class_tpay\\PaymentOptions\\BasicPaymentOptions' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentOptions/BasicPaymentOptions.php',
         'tpayLibs\\src\\_class_tpay\\PaymentOptions\\CardOptions' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentOptions/CardOptions.php',
         'tpayLibs\\src\\_class_tpay\\PaymentSMS' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentSms.php',
-        'tpayLibs\\src\\_class_tpay\\PaymentSzkwal' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentSzkwal.php',
-        'tpayLibs\\src\\_class_tpay\\PaymentWhiteLabel' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/PaymentWhiteLabel.php',
         'tpayLibs\\src\\_class_tpay\\Refunds\\BasicRefunds' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Refunds/BasicRefunds.php',
         'tpayLibs\\src\\_class_tpay\\Refunds\\CardRefunds' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Refunds/CardRefunds.php',
         'tpayLibs\\src\\_class_tpay\\Reports\\BasicReports' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Reports/BasicReports.php',
-        'tpayLibs\\src\\_class_tpay\\Reports\\SzkwalReports' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Reports/SzkwalReports.php',
         'tpayLibs\\src\\_class_tpay\\TransactionApi' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/TransactionApi.php',
         'tpayLibs\\src\\_class_tpay\\Utilities\\Lang' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Utilities/Lang.php',
         'tpayLibs\\src\\_class_tpay\\Utilities\\ObjectsHelper' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Utilities/ObjectsHelper.php',
@@ -1055,10 +1087,8 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
         'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeBlikAlias' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeBlikAlias.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeCard' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeCard.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeCardDeregister' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeCardDeregister.php',
-        'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeSzkwal' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeSzkwal.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeT6Register' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeT6Register.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeT6Standard' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeT6Standard.php',
-        'tpayLibs\\src\\_class_tpay\\Validators\\PaymentTypes\\PaymentTypeWhiteLabel' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/PaymentTypes/PaymentTypeWhiteLabel.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\ResponseFieldsValidator' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/ResponseFieldsValidator.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\VariableTypesInterface' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/VariableTypesInterface.php',
         'tpayLibs\\src\\_class_tpay\\Validators\\VariableTypes\\ArrayType' => __DIR__ . '/..' . '/tpay-com/tpay-php/tpayLibs/src/_class_tpay/Validators/VariableTypes/ArrayType.php',
@@ -1078,6 +1108,7 @@ class ComposerStaticInitec72b12da9b56166936480f392c574a2
             $loader->prefixLengthsPsr4 = ComposerStaticInitec72b12da9b56166936480f392c574a2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitec72b12da9b56166936480f392c574a2::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitec72b12da9b56166936480f392c574a2::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInitec72b12da9b56166936480f392c574a2::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInitec72b12da9b56166936480f392c574a2::$classMap;
 
         }, null, ClassLoader::class);

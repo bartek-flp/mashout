@@ -154,8 +154,20 @@ class OrderItem extends CommerceContentEntityBase implements OrderItemInterface 
   /**
    * {@inheritdoc}
    */
-  public function getAdjustments() {
-    return $this->get('adjustments')->getAdjustments();
+  public function getAdjustments(array $adjustment_types = []) {
+    /** @var \Drupal\commerce_order\Adjustment[] $adjustments */
+    $adjustments = $this->get('adjustments')->getAdjustments();
+    // Filter adjustments by type, if needed.
+    if ($adjustment_types) {
+      foreach ($adjustments as $index => $adjustment) {
+        if (!in_array($adjustment->getType(), $adjustment_types)) {
+          unset($adjustments[$index]);
+        }
+      }
+      $adjustments = array_values($adjustments);
+    }
+
+    return $adjustments;
   }
 
   /**
@@ -249,17 +261,11 @@ class OrderItem extends CommerceContentEntityBase implements OrderItemInterface 
    */
   protected function applyAdjustments(Price $price, array $adjustment_types = []) {
     $adjusted_price = $price;
-    foreach ($this->getAdjustments() as $adjustment) {
-      if ($adjustment_types && !in_array($adjustment->getType(), $adjustment_types)) {
-        continue;
+    foreach ($this->getAdjustments($adjustment_types) as $adjustment) {
+      if (!$adjustment->isIncluded()) {
+        $adjusted_price = $adjusted_price->add($adjustment->getAmount());
       }
-      if ($adjustment->isIncluded()) {
-        continue;
-      }
-
-      $adjusted_price = $adjusted_price->add($adjustment->getAmount());
     }
-
     return $adjusted_price;
   }
 
@@ -303,36 +309,6 @@ class OrderItem extends CommerceContentEntityBase implements OrderItemInterface 
   public function preSave(EntityStorageInterface $storage) {
     parent::preSave($storage);
     $this->recalculateTotalPrice();
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function postSave(EntityStorageInterface $storage, $update = TRUE) {
-    parent::postSave($storage, $update);
-
-    $order = $this->getOrder();
-    if ($order && !$order->hasItem($this)) {
-      $order->addItem($this);
-      $order->save();
-    }
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function postDelete(EntityStorageInterface $storage, array $entities) {
-    parent::postDelete($storage, $entities);
-
-    /** @var \Drupal\commerce_order\Entity\OrderItemInterface[] $entities */
-    foreach ($entities as $order_item) {
-      // Remove the reference from the order.
-      $order = $order_item->getOrder();
-      if ($order && $order->hasItem($order_item)) {
-        $order->removeItem($order_item);
-        $order->save();
-      }
-    }
   }
 
   /**
